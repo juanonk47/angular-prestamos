@@ -1,3 +1,4 @@
+import { StoreService } from 'src/app/services/store.service';
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import * as es from 'devextreme/localization/messages/es.json';
@@ -15,7 +16,8 @@ export class AppComponent {
   showSubmenu: boolean = false;
   isShowing = false;
   showSubSubMenu: boolean = false;
-  constructor(){
+  apikey = '';
+  constructor(private store: StoreService){
     loadMessages(es);
     locale(navigator.language);
   }
@@ -29,5 +31,10 @@ export class AppComponent {
     if (!this.isExpanded) {
       this.isShowing = false;
     }
+  }
+
+  valueChange(e: any){
+    this.apikey = e.target.value;
+    this.store.setApikey(e.target.value);
   }
 }

@@ -240,6 +240,22 @@
       "value": 10000,
       "id": 23,
       "nombreUsuario": "Juan Ramirez"
+    },
+    {
+      "pagado": false,
+      "accepted": false,
+      "idUser": 1,
+      "date": "2022-03-04T06:00:00.000Z",
+      "value": 10000,
+      "id": 24
+    },
+    {
+      "pagado": false,
+      "accepted": true,
+      "idUser": 1,
+      "date": "2022-03-04T06:00:00.000Z",
+      "value": 10000,
+      "id": 25
     }
   ]
 }

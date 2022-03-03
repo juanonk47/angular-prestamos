@@ -1,6 +1,11 @@
 <mat-toolbar color="primary" class="app-toolbar">
 	<button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button>
 	<h1 class="example-app-name">{{title}}</h1>
+  <form >
+    <mat-form-field appearance="fill">
+      <input matInput (change)="valueChange($event)"  placeholder="Api key" [value]="apikey">
+    </mat-form-field>
+  </form>
 </mat-toolbar>
 <mat-sidenav-container class="example-container">
 	 <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">

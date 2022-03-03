@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ApikeyGuard } from 'src/app/guards/apikey.guard';
 import { PrestamosComponent } from './prestamos.component';
 
 const routes: Routes = [
@@ -8,7 +9,8 @@ const routes: Routes = [
     component: PrestamosComponent,
     data: {
       preload: true
-    }
+    },
+    canActivate: [ApikeyGuard]
   }
 ];
 

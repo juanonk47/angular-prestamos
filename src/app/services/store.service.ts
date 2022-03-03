@@ -11,10 +11,20 @@ export class StoreService {
   private value: number = environment.BASE;
   bank_base$ = this.bank_base.asObservable();
 
+  private apikey = new BehaviorSubject<string>('');
+  private apikeyvalue: string = '';
+  apikey$ = this.apikey.asObservable();
+
+
   constructor() { }
 
   reduce_bankbase(price: number){
     this.bank_base.next((this.value - price));
     this.value -= price;
+  }
+
+  setApikey(key: string){
+    this.apikey.next(key);
+    this.apikeyvalue = key;
   }
 }

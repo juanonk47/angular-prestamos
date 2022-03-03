@@ -35,7 +35,6 @@ export class CPrestamoComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAll();
-    console.log( );
 
   }
 
@@ -46,9 +45,6 @@ export class CPrestamoComponent implements OnInit {
   }
 
   test(){
-    console.log(this.secondFormGroup.value);
-    console.log(this.firstFormGroup.value);
-
 
   }
 
@@ -60,7 +56,7 @@ export class CPrestamoComponent implements OnInit {
           this.alertAprobaado();
           this.spinner = false;
         }, 3000);
-        // this.store.reduce_bankbase(this.secondFormGroup.value.valor);
+        this.store.reduce_bankbase(this.secondFormGroup.value.valor);
         this.actualizar.emit(true);
         this.firstFormGroup.reset();
         this.secondFormGroup.reset();

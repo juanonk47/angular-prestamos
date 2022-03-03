@@ -49,8 +49,6 @@ export class SolicitudesComponent implements OnInit {
 
       promesa.then((data) => {
         this.dataSource.data = <Array<any>>data;
-        console.log(data);
-
       })
 
     })
@@ -58,7 +56,7 @@ export class SolicitudesComponent implements OnInit {
 
   pagarPrestamo(e: any){
     this.servicePrestamos.pagarPrestamo(e).subscribe(data => {
-      this.store.reduce_bankbase(e.value);
+      // this.store.reduce_bankbase(e.value);
       this.getALl();
       Swal.fire({
         title: 'Pagado!',

@@ -15,7 +15,6 @@ export class BancoBaseComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.bank_base$.subscribe(bank_base => {
-      console.log(bank_base);
       this.base_banco = this.cp.transform(bank_base) || '';
     })
   }

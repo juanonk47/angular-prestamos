@@ -1,3 +1,4 @@
+import { InterceptorService } from './interceptor.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,8 +15,9 @@ import { DxPieChartModule, DxSpeedDialActionModule } from 'devextreme-angular';
 import {MatCardModule} from '@angular/material/card';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { BancoBaseComponent } from './components/banco-base/banco-base.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -38,9 +40,15 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatCardModule,
     DxSpeedDialActionModule,
     HttpClientModule,
+    MatInputModule
 
   ],
-  providers: [],
+  providers: [
+    {
+    provide: HTTP_INTERCEPTORS,
+    useClass: InterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
