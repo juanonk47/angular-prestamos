@@ -1,4 +1,4 @@
-.example-container {
+.container {
   height: 98vh;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
@@ -11,7 +11,7 @@
   width: 88vw;
   height: 60vh;
 }
-.example-sidenav {
+.sidenav {
    user-select: none;
 }
 .full-width {
@@ -34,7 +34,7 @@
 .submenu.expanded {
   transform: scaleY(1);
 }
-.example-app-name{
+.app-name{
   margin-left: 1%;
 }
 .app-toolbar {

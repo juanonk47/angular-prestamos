@@ -1,14 +1,14 @@
 <mat-toolbar color="primary" class="app-toolbar">
 	<button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button>
-	<h1 class="example-app-name">{{title}}</h1>
+	<h1 class="app-name">{{title}}</h1>
   <form >
     <mat-form-field appearance="fill">
       <input matInput (change)="valueChange($event)"  placeholder="Api key" [value]="apikey">
     </mat-form-field>
   </form>
 </mat-toolbar>
-<mat-sidenav-container class="example-container">
-	 <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+<mat-sidenav-container class="container">
+	 <mat-sidenav #sidenav class="sidenav" mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
 		<mat-nav-list>
 			<mat-list-item class="parent" [routerLink]="['/home']">
           <a routerLinkActive="active" *ngIf="isShowing || isExpanded" [ngClass]="{'expanded' : showSubmenu}" >Home</a>
@@ -33,7 +33,7 @@
       <router-outlet></router-outlet>
     </mat-card>
   </body>
-  <app-banco-base class="example-app-name"></app-banco-base>
+  <app-banco-base class="app-name"></app-banco-base>
 
 </mat-sidenav-container>
 

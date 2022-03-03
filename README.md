@@ -43,6 +43,7 @@ La pagina prestamos y usuarios esta protegida por una api key, la cual es `secre
 ## Librerias
 Se uso material en la parte de prestamos,
 En la parte de usuario y dashboard del home se uso [Devextreme](https://js.devexpress.com/ "Devextreme")
+Sweatalert tambien se agrego
 
 ## BD del json-server
 Se encuentra en la raiz del sistema como db.json
