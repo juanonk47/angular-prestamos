@@ -1,0 +1,60 @@
+<br>
+
+<div *ngIf="spinner" class="center">
+  <mat-spinner  style="margin:0 auto;"></mat-spinner>
+</div>
+
+<div *ngIf="!spinner">
+  <mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup" label="Selecciona El Usuario">
+      <form [formGroup]="firstFormGroup">
+        <mat-form-field appearance="fill">
+          <mat-label>Usuario</mat-label>
+          <mat-select formControlName="usuario" name="usuario" required>
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let usuario of usuarios" [value]="usuario.id">
+              {{usuario.nombre}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Aceptar</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Selecciona El Valor Del Prestamo y Fecha de Pago">
+      <form [formGroup]="secondFormGroup">
+        <label>{{secondFormGroup.get('valor')?.value | currency}}</label>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Cantidad del prestamo</mat-label>
+          <input matInput type="number" formControlName="valor" placeholder="Cantidad" required>
+          <mat-error *ngIf="this.secondFormGroup.get('valor')?.errors?.['min']">La cantidad minima es de 10,000</mat-error>
+          <mat-error *ngIf="this.secondFormGroup.get('valor')?.errors?.['max']">La cantidad maxima es de 100,000</mat-error>
+
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Escoge la fecha de pago</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="fecha">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Atras</button>
+          <button mat-button matStepperNext (click)="test()">Aceptar</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Terminar Prestamo</ng-template>
+      <div>
+        <button mat-button matStepperPrevious>Regresar</button>
+        <button mat-button (click)="stepper.reset()">Reiniciar</button>
+
+        <button mat-raised-button color="accent" [disabled]="!firstFormGroup.valid || !secondFormGroup.valid"
+          (click)="solicitar()">SOLICITAR</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>

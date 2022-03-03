@@ -1,0 +1,26 @@
+<dx-pie-chart
+  id="pie"
+  type="doughnut"
+  title="Prestamos concedidos"
+  palette="Soft Pastel"
+  [dataSource]="status"
+  class="full"
+>
+<dxo-size [height]="800"></dxo-size>
+  <dxi-series argumentField="accepted">
+    <dxo-label [visible]="true">
+      <dxo-connector [visible]="true"></dxo-connector>
+    </dxo-label>
+  </dxi-series>
+  <dxo-export [enabled]="true"></dxo-export>
+  <dxo-legend
+    [margin]="0"
+    horizontalAlignment="right"
+    verticalAlignment="top"
+  ></dxo-legend>
+  <dxo-tooltip
+    [enabled]="true"
+  >
+  </dxo-tooltip>
+
+</dx-pie-chart>

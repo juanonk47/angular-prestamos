@@ -1,0 +1,53 @@
+<dx-data-grid
+  id="gridContainer"
+  keyExpr="id"
+  [dataSource]="usuarios"
+  [columns]="['nombre', 'correo', 'cedula']"
+  [showBorders]="true"
+  (onRowInserted)="save($event)"
+  (onRowUpdated)="update($event)"
+  (onRowRemoved)="deleted($event)"
+>
+<dxo-paging [pageSize]="10"></dxo-paging>
+<dxo-pager
+    [showPageSizeSelector]="true"
+    [allowedPageSizes]="[10, 25, 50, 100]"
+  ></dxo-pager>
+  <dxo-search-panel
+    [visible]="true"
+    [highlightCaseSensitive]="true"
+  ></dxo-search-panel>
+  <dxo-group-panel [visible]="true"></dxo-group-panel>
+  <dxo-grouping [autoExpandAll]="false"></dxo-grouping>
+  <dxo-filter-row
+    [visible]="true"
+  ></dxo-filter-row>
+  <dxo-header-filter [visible]="true"></dxo-header-filter>
+  <dxo-search-panel
+    [visible]="true"
+    [width]="240"
+    placeholder="Search..."
+  ></dxo-search-panel>
+  <dxo-editing
+  mode="popup"
+  [allowUpdating]="true"
+  [allowAdding]="true"
+  [allowDeleting]="true"
+>
+  <dxo-popup
+    title="Usuario"
+    [showTitle]="true"
+    [width]="600"
+    [height]="400"
+  >
+  </dxo-popup>
+  <dxo-form>
+    <dxi-item itemType="group" >
+      <dxi-item dataField="nombre"></dxi-item>
+      <dxi-item dataField="correo"></dxi-item>
+      <dxi-item dataField="cedula"></dxi-item>
+    </dxi-item>
+  </dxo-form>
+</dxo-editing>
+
+</dx-data-grid>

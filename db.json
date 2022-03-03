@@ -1,0 +1,245 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "usuario": [
+    {
+      "id": 1,
+      "nombre": "Juan Ramirez",
+      "correo": "joramirez@gmail.com",
+      "cedula": "213209"
+    },
+    {
+      "nombre": "Martin",
+      "correo": "martin@gmail.com",
+      "cedula": "341123",
+      "id": "d5c44731-db61-1708-55ee-2901aa2ecc88"
+    },
+    {
+      "nombre": "Teseo",
+      "correo": "teseo@gmail.com",
+      "cedula": "32111",
+      "id": "48695b6b-8e19-d2ad-7c4c-2847ad5b944e"
+    },
+    {
+      "nombre": "Galvao Terro",
+      "correo": "galvao@gmail.com",
+      "cedula": "34553",
+      "id": "dbe8e313-7bd4-f769-012c-8dc950838273"
+    },
+    {
+      "nombre": "Mitzi Abigail Lopez",
+      "correo": "abi@gmail.com",
+      "cedula": "C321",
+      "id": "916177dd-b891-c652-254d-b11aae727ad8"
+    }
+  ],
+  "prestamos": [
+    {
+      "id": 1,
+      "accepted": true,
+      "value": 1000,
+      "date": "2020-03-25",
+      "idUser": 1,
+      "pagado": true,
+      "nombreUsuario": "Juan Ramirez"
+    },
+    {
+      "id": 2,
+      "accepted": false,
+      "value": 300,
+      "date": "2020-03-25",
+      "idUser": 2,
+      "pagado": false
+    },
+    {
+      "accepted": false,
+      "idUser": "dbe8e313-7bd4-f769-012c-8dc950838273",
+      "date": "2022-03-02T21:26:59.473Z",
+      "value": 1000,
+      "id": 3,
+      "pagado": false
+    },
+    {
+      "accepted": false,
+      "idUser": "48695b6b-8e19-d2ad-7c4c-2847ad5b944e",
+      "date": "2022-03-02T21:27:28.262Z",
+      "value": 1000,
+      "id": 4,
+      "pagado": false
+    },
+    {
+      "accepted": false,
+      "idUser": 1,
+      "date": "2022-03-02T21:28:30.999Z",
+      "value": 2000,
+      "id": 5,
+      "pagado": false
+    },
+    {
+      "accepted": true,
+      "idUser": "d5c44731-db61-1708-55ee-2901aa2ecc88",
+      "date": "2022-03-02T21:28:45.947Z",
+      "value": 20000,
+      "id": 6,
+      "pagado": true,
+      "nombreUsuario": "Martin"
+    },
+    {
+      "accepted": true,
+      "idUser": "d5c44731-db61-1708-55ee-2901aa2ecc88",
+      "date": "2022-03-02T21:29:30.589Z",
+      "value": 200,
+      "id": 7,
+      "pagado": true,
+      "nombreUsuario": "Martin"
+    },
+    {
+      "accepted": false,
+      "idUser": "916177dd-b891-c652-254d-b11aae727ad8",
+      "date": "2023-02-01T06:00:00.000Z",
+      "value": 18000,
+      "id": 8,
+      "pagado": false
+    },
+    {
+      "accepted": true,
+      "idUser": "d5c44731-db61-1708-55ee-2901aa2ecc88",
+      "date": "2022-03-02T21:45:51.525Z",
+      "value": 100,
+      "id": 9,
+      "pagado": true,
+      "nombreUsuario": "Martin"
+    },
+    {
+      "accepted": true,
+      "idUser": 1,
+      "date": "2022-03-02T21:54:01.148Z",
+      "value": 100,
+      "id": 10,
+      "pagado": true,
+      "nombreUsuario": "Juan Ramirez"
+    },
+    {
+      "accepted": false,
+      "idUser": "d5c44731-db61-1708-55ee-2901aa2ecc88",
+      "date": "2022-03-02T21:54:46.599Z",
+      "value": 100,
+      "id": 11,
+      "pagado": false
+    },
+    {
+      "accepted": false,
+      "idUser": "d5c44731-db61-1708-55ee-2901aa2ecc88",
+      "date": "2022-03-02T21:54:46.599Z",
+      "value": 100,
+      "id": 12,
+      "pagado": false
+    },
+    {
+      "accepted": false,
+      "idUser": "d5c44731-db61-1708-55ee-2901aa2ecc88",
+      "date": "2022-03-02T21:54:46.599Z",
+      "value": 100,
+      "id": 13,
+      "pagado": false
+    },
+    {
+      "accepted": false,
+      "idUser": "d5c44731-db61-1708-55ee-2901aa2ecc88",
+      "date": "2022-03-02T21:54:46.599Z",
+      "value": 100,
+      "id": 14,
+      "pagado": false
+    },
+    {
+      "accepted": true,
+      "idUser": "48695b6b-8e19-d2ad-7c4c-2847ad5b944e",
+      "date": "2022-03-02T21:54:46.599Z",
+      "value": 1000,
+      "id": 15,
+      "pagado": true,
+      "nombreUsuario": "Teseo"
+    },
+    {
+      "accepted": false,
+      "idUser": "916177dd-b891-c652-254d-b11aae727ad8",
+      "date": "2023-02-22T06:00:00.000Z",
+      "value": 18000,
+      "id": 16,
+      "pagado": false
+    },
+    {
+      "accepted": false,
+      "idUser": "916177dd-b891-c652-254d-b11aae727ad8",
+      "date": "2023-02-22T06:00:00.000Z",
+      "value": 18000,
+      "id": 17,
+      "pagado": false
+    },
+    {
+      "accepted": true,
+      "idUser": "916177dd-b891-c652-254d-b11aae727ad8",
+      "date": "2023-02-22T06:00:00.000Z",
+      "value": 18000,
+      "id": 18,
+      "pagado": true,
+      "nombreUsuario": "Mitzi Abigail Lopez"
+    },
+    {
+      "accepted": false,
+      "idUser": "d5c44731-db61-1708-55ee-2901aa2ecc88",
+      "date": "2022-03-03T01:40:45.106Z",
+      "value": 77,
+      "id": 19,
+      "pagado": false
+    },
+    {
+      "pagado": false,
+      "accepted": false,
+      "idUser": 1,
+      "date": "2022-03-03T02:26:58.070Z",
+      "value": 100000,
+      "id": 20
+    },
+    {
+      "pagado": false,
+      "accepted": true,
+      "idUser": 1,
+      "date": "2022-03-03T02:26:58.070Z",
+      "value": 100000,
+      "id": 21
+    },
+    {
+      "pagado": false,
+      "accepted": true,
+      "idUser": "916177dd-b891-c652-254d-b11aae727ad8",
+      "date": "2022-03-03T02:32:51.746Z",
+      "value": 10000,
+      "id": 22
+    },
+    {
+      "pagado": true,
+      "accepted": true,
+      "idUser": 1,
+      "date": "2022-03-02T06:00:00.000Z",
+      "value": 10000,
+      "id": 23,
+      "nombreUsuario": "Juan Ramirez"
+    }
+  ]
+}
